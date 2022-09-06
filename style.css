@@ -9,7 +9,8 @@ body,
 h1, 
 h2, 
 h3,
-h4 {
+h4, 
+p {
     font-family: sans-serif; 
     margin: 0;
 }
@@ -68,14 +69,13 @@ Works best with max-width and means that it'll remain in a spot regardless of th
     max-width: 1200px;
     padding: 40px;
     width: 100%;
-    border: 10px solid; 
 }
 
 /* Try to alphabetize code */ 
 
 .interior h1 {
     color: black;
-    font-size:64px;
+    font-size: 64px;
     font-weight: 700; 
     line-height: 1.5;
     margin-bottom: 45px;
@@ -83,14 +83,14 @@ Works best with max-width and means that it'll remain in a spot regardless of th
 
 .interior h2 {
     color: black;
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 400; 
     line-height: 1;
 }
 
 .interior p {
     color: black;
-    font-size:32px;
+    font-size: 32px;
     font-weight: 700; 
     line-height: 1;
 }
@@ -98,7 +98,46 @@ Works best with max-width and means that it'll remain in a spot regardless of th
 /*Styling the inside of the border box*/ 
 .box-model-interior {
     background-color: #9EF490;
+    border: 10px solid; 
     border-color: #187908;
     
     
 }
+
+/*Section Heading Start */
+
+
+section.heading-section-section {
+    background-color: #F1CAF0;
+    
+}
+
+/*Adjusting the heading for everything but not h1*/
+
+.heading-sec h1, .heading-sec h2, .heading-sec h3, .heading-sec p, .heading-sec h4 {
+    color: #6C0468;
+    font-weight: 700; 
+    padding: 0px 0px 40px 0px; 
+} 
+
+.heading-sec h1 {
+    color: #6C0468;
+    font-weight: 700; 
+}
+
+
+.heading-sec h3 {
+    font-size: 64px;
+}
+
+.heading-sec h4 {
+    font-size: 32px;
+    font-weight: 700px;
+    line-height: 41.4px;
+}
+
+.heading-sec p {
+    font-size: 20px; 
+    line-height: 23px;
+}
+
