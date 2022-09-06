@@ -1,0 +1,104 @@
+/*Fixing the browser rules*/
+/*Affects every single element in the website */ 
+* {
+    box-sizing: border-box;
+}
+
+/*Setting it so that the margin = 0 for these elements */ 
+body, 
+h1, 
+h2, 
+h3,
+h4 {
+    font-family: sans-serif; 
+    margin: 0;
+}
+
+/* Get most general rules at the top and most specific towards the bottom (rule of thumb for later)*/
+/*Make it as close to perfection as possible (use the right shade of blue and stuff)*/ 
+
+header {
+    background-color: #85C4FF; 
+    padding: 40px; 
+
+}
+/* Targets all nav elements inside any header element (in our case, there's only one) */
+/*Really think about if you're styling one particular nav or if the rules apply for all*/ 
+
+header nav {
+
+}
+
+/*Styling the links*/
+
+header nav a {
+
+}
+/*Any section element with this class, will have this applied*/
+section.section-element{
+    margin: 0; 
+    padding: 40px;
+}
+
+/*Any section with box-model-section as a class*/ 
+section.box-model-section{
+    background-color: #CFF1CA;
+}
+
+/* ==Styling the interior now===
+
+Margin and padding is calculated in a box (top, right, bottom, left) 
+
+So if you wrote margin like...
+
+margin: 0 auto 0 auto; -- Means 0 applies to the top, auto to the right, 0 to the bottom, auto to the left 
+
+Kinda like you're going clockwise
+
+What auto does is back fills all the margin in that space, which is good for layout 
+
+Works best with max-width and means that it'll remain in a spot regardless of the width of screen
+ In short, auto on left and right will be responsive, expanding to at most 1200px (default screen)
+ 
+ And 10px on top and bottom means that when you shrink or expand it, it will remain 10px
+*/ 
+
+.interior {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 40px;
+    width: 100%;
+    border: 10px solid; 
+}
+
+/* Try to alphabetize code */ 
+
+.interior h1 {
+    color: black;
+    font-size:64px;
+    font-weight: 700; 
+    line-height: 1.5;
+    margin-bottom: 45px;
+}
+
+.interior h2 {
+    color: black;
+    font-size: 32px;
+    font-weight: 400; 
+    line-height: 1;
+}
+
+.interior p {
+    color: black;
+    font-size:32px;
+    font-weight: 700; 
+    line-height: 1;
+}
+
+/*Styling the inside of the border box*/ 
+.box-model-interior {
+    background-color: #9EF490;
+    border-color: #187908;
+    
+    
+}
