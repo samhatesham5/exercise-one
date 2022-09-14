@@ -18,7 +18,7 @@
             <a>Simple JavaScript</a>
         </nav>
     </header>
-    <main></main>
+    <main>
         <!--Giving each scetion it's own ID and it's own class (there's 2 classes in each)-->
         <section id="box-model" class="box-model-section section-element">
             <div class="box-model-interior interior">
@@ -32,14 +32,40 @@
 
             </div>
         </section>
+        <!--Flex Box Section-->
         <section id="flex-box" class="flex-box-section section-element">
-            <div class="interior">
+            <div class="interior interior-flex">
+                <!--Styling the top div (common way to continue hireachy)-->
+                <div class="interior-flex--top">
+                    <div>
+                        <h1>Display: Flex</h1>
+                    </div>
+                </div>
+                <!--Styling the column on the left-->
+                <div class="interior-flex--horizontal">
+                    <div>
 
+                    </div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <!--Styling the column on the right-->
+                <div class="interior-flex--vertical">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
         </section>
         <section id="positioning" class="positioning-section section-element">
             <div class="interior">
-
+                <div class="circle circle-one"></div>
+                <!--Ask about where in Figma he found these style values-->
+                <div class="circle" style="right: 48px; top: 34px;"></div>
+                <div class="circle" style="right: 186px; bottom: 143px;"></div>
+                <div class="sqaure" style="right: 56px; bottom: 48px;"></div>
+                <div class="sqaure" style="right: 510px; bottom: 204px;"></div>
+                <h1>Positioning <br> Elements</h1>
             </div>
         </section>
         <!--Proper Heading Section-->
@@ -57,7 +83,9 @@
             <div class="interior"> </div>
 
         </section>
-
-    <footer></footer>
+    </main> 
+    <footer>
+        <p>Sam Whitley - Fall, 2022</p>
+    </footer>
 </body>
 </html>

@@ -46,7 +46,7 @@ section.box-model-section{
     background-color: #CFF1CA;
 }
 
-/* ==Styling the interior now===
+/* Styling the interior now 
 
 Margin and padding is calculated in a box (top, right, bottom, left) 
 
@@ -104,8 +104,7 @@ Works best with max-width and means that it'll remain in a spot regardless of th
     
 }
 
-/*Section Heading Start */
-
+/*Section Heading Starts */
 
 section.heading-section-section {
     background-color: #F1CAF0;
@@ -141,3 +140,178 @@ section.heading-section-section {
     line-height: 23px;
 }
 
+/* -- Working on the Flex-Box Section -- */
+.flex-box-section {
+    background-color: #F1D3CA;
+
+}
+
+/* Space-between v. space-around 
+    Space-around = Fill in all the space around (pushes in)
+    space-between = Fill out space between (spaces content out a bit)
+
+*/
+.interior-flex {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+
+
+}
+/*Styling every single interior-flex div */ 
+
+.interior-flex > div {
+    border: 10px solid #7D260B;
+    background-color: #FF9371;
+
+}
+
+/* Flex basis - this is how large I want it to be 
+
+    margin-bottom gives us 42 px of space between the darker brown border and 
+    the next two divs
+
+    padding with 32 gives us space inside to see the background color
+
+
+*/ 
+.interior-flex--top{
+    flex-basis: 100%;
+    margin-bottom: 42px;
+    padding: 32px;
+    text-align: center;
+}
+
+/* Setting the max width and having the whole div fill it out 
+    You can use justify-content to center anything horozontially
+    You can use align-iems to center anything up and down
+
+*/ 
+
+.interior-flex--top > div {
+    align-items: center;
+    background-color: #FFECE5;
+    border: 5px solid #DD4414;
+    display: flex;
+    height: 170px;  
+    justify-content: center;
+    margin: 0 auto;  
+    max-width: 825px;
+    width: 100%; 
+}
+
+/* Fixing this specific h1 (so that we can control the margin of this one) 
+
+*/ 
+.interior-flex--top > div > h1 {
+    margin: 0;   
+}
+
+/* Setting up the other boxes */ 
+
+.interior-flex--horizontal, .interior-flex--vertical {
+    display: flex; 
+    flex-basis: 48%;
+    height: 324px; 
+    padding: 20px;
+}
+
+.interior-flex--horizontal > div, 
+.interior-flex--vertical > div {
+    background-color: #FFECE5;
+    border: 5px solid #DD4414;
+    flex-basis: 33%;
+}
+
+/* Each div has space to the right of them */
+.interior-flex--horizontal > div {
+    margin-right: 10px;
+}
+.interior-flex--vertical > div {
+    margin-bottom: 10px;
+}
+
+/* Styling vertical so that it's laying down 
+    Margin left allows us to move it down bc flex-wrap is on the div
+
+*/ 
+.interior-flex--vertical {
+    flex-direction: column;
+}
+
+/* Pseudo selector 
+    How do we apply a rule that affects just the last of that div without naming
+    a whole class
+
+    div:last-of-type {}
+
+*/ 
+
+.interior-flex--horizontal > div:last-of-type, 
+.interior-flex--vertical > div:last-of-type {
+    margin-bottom: 0px;
+}
+
+/* -- Positioning Section -- */ 
+
+.positioning-section {
+    background-color: #CAD7F1;
+
+}
+
+/* Making overflow hidden allows it so 
+    that the shapes stay inside the container and just hides whatevers left
+*/
+
+.positioning-section .interior {
+    background-color: #85C4FF;
+    border: 10px solid #0E3F9E;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle, .sqaure {
+    background-color: #4480F4;
+    border: 10px solid #0E3F9E;;
+    height: 200px;
+    position: absolute;
+    width: 200px;
+
+}
+.circle {
+    border-radius: 50%;
+}
+
+/*Any circle with the .circle class will have circle-one */ 
+.circle.circle-one {
+    bottom: 48px;
+    left: 48px; 
+}
+
+/* z -index allows you to go above elements 
+    If a web site is a 2D plane, z would allow us to go 3D 
+    and there's a bunch of levels above that starting with 0
+        - Only works if you element is relative though
+        - All elements are positioned static until otherwise said 
+
+*/
+
+.positioning-section h1 {
+    position: relative;
+    z-index: 1;
+}
+
+/*---Footer---*/
+
+footer {
+    align-items: center;
+    background-color: #FFC3C3;
+    display: flex;
+    font-weight: 700;
+    height: 108px;
+    margin: 0 auto; 
+    max-width: 1280px;
+    padding-left: 40px;
+    width: 100%; 
+}
