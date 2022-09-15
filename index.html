@@ -10,12 +10,13 @@
 </head>
 <body>
     <header>
+    <!--Adding links to the page using Ids-->
         <nav>
-            <a>Box Model</a>
-            <a>Flexbox</a>
-            <a>Positioning Elements</a>
-            <a>Heading Usage</a>
-            <a>Simple JavaScript</a>
+            <a href="#box-model">Box Model</a>
+            <a href="#flex-box">Flexbox</a>
+            <a href="#positioning">Positioning Elements</a>
+            <a href="#heading-section">Heading Usage</a>
+            <a href="#simple-javascript">Simple JavaScript</a>
         </nav>
     </header>
     <main>
@@ -43,9 +44,7 @@
                 </div>
                 <!--Styling the column on the left-->
                 <div class="interior-flex--horizontal">
-                    <div>
-
-                    </div>
+                    <div></div>
                     <div></div>
                     <div></div>
                 </div>
@@ -79,13 +78,41 @@
                 <p>And you could put another paragraph (or two, or three...) under this further describing this concept. (p)</p>
             </div>
         </section>
+        <!--JavaScript Section-->
+        <!--We'll never do this again but here's our javascript-->
         <section id="simple-javascript" class="simple-javascript-section section-element">
-            <div class="interior"> </div>
-
+            <script>
+                let counter = 0; 
+    
+                //Need a function to update the value
+                //Everytime we click this button we want it to increase
+                function increaseCounterValue(){
+                    //You'd use counter ++  so that it increases
+                    counter = counter + 1; 
+                    //We want the variable to display on the DOM; select based on the id counter
+                    //So we're connecting counterDiv to counter
+                    const counterDiv = document.querySelector("#counter");
+                    //And then we're displaying counter++ on the HTML
+                    counterDiv.innerHTML = counter; 
+                };
+            </script>
+            <div class="interior"> 
+                <h1>Simple JavaScript</h1>
+                <!--This is the value that will change (need ids for JS)-->
+                <div class="counter-button-wrapper">
+                    <p id="counter">0</p>
+                    <!--This is the button-->
+                    <div id="button">
+                        <button onclick="increaseCounterValue()">Click to increase</button>
+                    </div>
+                </div>
+            </div>
         </section>
+        <footer>
+            <div class="inside-footer">
+                <p>Sam Whitley - Fall, 2022</p>
+            </div>
+        </footer>
     </main> 
-    <footer>
-        <p>Sam Whitley - Fall, 2022</p>
-    </footer>
 </body>
 </html>

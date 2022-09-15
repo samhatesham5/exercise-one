@@ -27,13 +27,43 @@ header {
 /*Really think about if you're styling one particular nav or if the rules apply for all*/ 
 
 header nav {
-
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    max-width: 1260px;
+    width: 100%; 
 }
 
 /*Styling the links*/
 
 header nav a {
+    color:black; 
+    font-weight: bold;
+    text-decoration: none;
+    /*It's 40 px of space between so 20 on left and right*/ 
+    margin: 0 15px; 
+    padding: 5px;
+}
 
+a:visited {
+    color: black; 
+}
+
+/* We don't want any extra space on the left or right so it's aligned with the line */
+/* 
+
+-This way, the t in Javascript doesn't have extra space on the right 
+-This all becomes super helpful with making headers that have visual consistency
+(i.e logos, don't want it to shift weird because of the margins)
+
+*/ 
+header nav a:last-of-type {
+    margin-right: 0;
+}
+
+header nav a:first-of-type {
+    margin-left: 0;
 }
 /*Any section element with this class, will have this applied*/
 section.section-element{
@@ -155,7 +185,7 @@ section.heading-section-section {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: space-between;
-
+    padding: 0; 
 
 }
 /*Styling every single interior-flex div */ 
@@ -163,7 +193,6 @@ section.heading-section-section {
 .interior-flex > div {
     border: 10px solid #7D260B;
     background-color: #FF9371;
-
 }
 
 /* Flex basis - this is how large I want it to be 
@@ -180,6 +209,7 @@ section.heading-section-section {
     margin-bottom: 42px;
     padding: 32px;
     text-align: center;
+    
 }
 
 /* Setting the max width and having the whole div fill it out 
@@ -302,11 +332,36 @@ section.heading-section-section {
     z-index: 1;
 }
 
+/*--JavaScript--*/ 
+.simple-javascript-section {
+    background-color: #FAEFD3;
+}
+
+.simple-javascript-section .interior h1 {
+    color: #644904;
+}
+
+.counter-button-wrapper {
+    align-items: center;
+    display: flex;
+}
+
+.counter-button-wrapper p {
+    color: #504D46; 
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 74px;
+    margin: 0 40px 0 0;
+}
+
 /*---Footer---*/
 
 footer {
-    align-items: center;
     background-color: #FFC3C3;
+}
+
+.inside-footer {
+    align-items: center;
     display: flex;
     font-weight: 700;
     height: 108px;
